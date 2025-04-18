@@ -119,8 +119,8 @@ const Projects: React.FC<ProjectsProps> = ({ isStandalone = false }) => {
     <section id="projects" className={sectionClassName}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20 relative">
-          <div className="absolute -top-12 right-1/4 w-32 h-32 bg-primary/10 rounded-full blur-xl"></div>
-          <div className="absolute -bottom-8 left-1/4 w-28 h-28 bg-accent/10 rounded-full blur-xl"></div>
+          <div className="absolute -top-12 right-1/4 w-32 h-32 bg-primary/20 rounded-full blur-2xl"></div>
+          <div className="absolute -bottom-8 left-1/4 w-28 h-28 bg-accent/20 rounded-full blur-2xl"></div>
           
           <h2 className="text-5xl md:text-6xl font-serif text-text mb-6 relative z-10">Projects</h2>
           <p className="text-xl text-text-light mb-6 max-w-2xl mx-auto leading-relaxed relative z-10">
@@ -133,10 +133,16 @@ const Projects: React.FC<ProjectsProps> = ({ isStandalone = false }) => {
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="backdrop-blur-sm bg-white/60 rounded-3xl p-1 border border-primary/10 group transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1"
+              className="backdrop-blur-sm bg-white/60 rounded-3xl p-1 border border-primary/20 group transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1"
             >
               <div className="p-8 relative overflow-hidden rounded-2xl">
-                <div className={`absolute -top-6 -right-6 w-16 h-16 ${index % 3 === 0 ? 'bg-primary/10' : index % 3 === 1 ? 'bg-secondary/10' : 'bg-accent/10'} rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                <div className={`absolute -top-6 -right-6 w-20 h-20 ${
+                  index % 3 === 0 
+                    ? 'bg-primary/15' 
+                    : index % 3 === 1 
+                      ? 'bg-secondary/15' 
+                      : 'bg-accent/15'
+                } rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
                 
                 <div className="flex flex-col md:flex-row justify-between items-start gap-4 mb-6">
                   <h3 className="text-2xl font-serif text-text group-hover:text-primary transition-colors duration-300">
@@ -154,28 +160,28 @@ const Projects: React.FC<ProjectsProps> = ({ isStandalone = false }) => {
                 <p className="text-text-light mb-6 leading-relaxed">{project.description}</p>
                 <div className="mb-6">
                   <h4 className="text-sm font-medium text-text mb-3 flex items-center">
-                    <span className="w-4 h-4 mr-2 rounded-full bg-accent/20 flex items-center justify-center">
+                    <span className="w-5 h-5 mr-2 rounded-full bg-accent/20 flex items-center justify-center">
                       <span className="w-2 h-2 rounded-full bg-accent"></span>
                     </span>
                     Key Features
                   </h4>
-                  <ul className="space-y-2 pl-6">
+                  <ul className="space-y-2.5 pl-6">
                     {project.features.map((feature, featureIndex) => (
                       <li 
                         key={featureIndex} 
                         className="text-text-light relative"
                       >
-                        <span className="absolute -left-6 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-primary/40"></span>
+                        <span className="absolute -left-6 top-1/2 transform -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-primary/50"></span>
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2.5">
                   {project.tags.map((tag, tagIndex) => (
                     <span 
                       key={tagIndex} 
-                      className="text-xs text-text-light bg-white/80 px-3 py-1 rounded-full border border-secondary/20 hover:border-primary/40 hover:text-primary transition-colors duration-300"
+                      className="text-xs text-text-light bg-white/80 px-3 py-1.5 rounded-full border border-secondary/30 hover:border-primary/50 hover:text-primary transition-colors duration-300"
                     >
                       {tag}
                     </span>

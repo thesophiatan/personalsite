@@ -6,12 +6,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: '#FDF6F8', // Soft blush white
-        text: '#3A2A2D', // Darker rose brown for better contrast
-        'text-light': '#6B4B4F', // Medium rose for better readability
-        primary: '#E6C3D9', // Soft lavender
-        secondary: '#B5E5CF', // Mint
-        accent: '#9AC5D9', // Sky blue
+        background: '#FDFAFC', // Softer, cream-like white with a hint of pink
+        text: '#574167', // Softer plum color for main text
+        'text-light': '#796087', // Lighter plum for secondary text
+        primary: '#F8B8D0', // Sweet pink
+        secondary: '#BAE1C9', // Mint green
+        accent: '#FFE0BD', // Soft peach/apricot
+        'accent-alt': '#D5C1F0', // Lavender
         'accent-dark': '#7AB8A7', // Sage green
       },
       fontFamily: {
