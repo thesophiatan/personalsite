@@ -5,9 +5,9 @@ const About: React.FC = () => {
     <section id="about" className="py-20 bg-gradient-to-b from-primary/20 to-background">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Decorative elements */}
-        <div className="absolute top-12 right-10 w-16 h-16 rounded-full bg-primary/40 blur-2xl"></div>
+        <div className="absolute top-12 right-10 w-16 h-16 rounded-full bg-primary/30 blur-2xl"></div>
         <div className="absolute bottom-24 left-6 w-20 h-20 rounded-full bg-accent/30 blur-2xl"></div>
-        <div className="absolute top-1/2 right-0 w-10 h-10 rounded-full bg-secondary/40 blur-xl"></div>
+        <div className="absolute top-1/2 right-0 w-10 h-10 rounded-full bg-secondary/30 blur-xl"></div>
         
         <h2 className="text-6xl font-serif text-text mb-8 text-center">
           About Me
@@ -18,7 +18,7 @@ const About: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* What I Do */}
-          <div className="bg-white/60 backdrop-blur-sm p-8 rounded-3xl shadow-sm hover:shadow-md transition-all duration-300 border border-primary/30 hover:border-primary/50">
+          <div className="bg-white/60 backdrop-blur-sm p-8 rounded-3xl shadow-sm hover:shadow-md transition-all duration-300 border border-primary/20 hover:border-primary/40">
             <h3 className="text-2xl font-serif text-text mb-5 flex items-center">
               <span className="h-3 w-3 rounded-full bg-primary mr-3"></span>
               What I Do
@@ -31,7 +31,7 @@ const About: React.FC = () => {
                 "Study psychology to better understand how people interact with technology"
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <span className="text-primary inline-block mr-2">♡</span>
+                  <span className="text-primary inline-block mr-2.5 text-xs">●</span>
                   <span className="text-text-light">{item}</span>
                 </li>
               ))}
@@ -39,7 +39,7 @@ const About: React.FC = () => {
           </div>
 
           {/* Background */}
-          <div className="bg-white/60 backdrop-blur-sm p-8 rounded-3xl shadow-sm hover:shadow-md transition-all duration-300 border border-secondary/30 hover:border-secondary/50">
+          <div className="bg-white/60 backdrop-blur-sm p-8 rounded-3xl shadow-sm hover:shadow-md transition-all duration-300 border border-secondary/20 hover:border-secondary/40">
             <h3 className="text-2xl font-serif text-text mb-5 flex items-center">
               <span className="h-3 w-3 rounded-full bg-secondary mr-3"></span>
               Background
@@ -52,7 +52,7 @@ const About: React.FC = () => {
                 "Connecting with my heritage through cooking traditional recipes"
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <span className="text-secondary inline-block mr-2">✿</span>
+                  <span className="text-secondary inline-block mr-2.5 text-xs">●</span>
                   <span className="text-text-light">{item}</span>
                 </li>
               ))}
@@ -60,7 +60,7 @@ const About: React.FC = () => {
           </div>
 
           {/* Everyday Life */}
-          <div className="bg-white/60 backdrop-blur-sm p-8 rounded-3xl shadow-sm hover:shadow-md transition-all duration-300 border border-accent/30 hover:border-accent/50">
+          <div className="bg-white/60 backdrop-blur-sm p-8 rounded-3xl shadow-sm hover:shadow-md transition-all duration-300 border border-accent/20 hover:border-accent/40">
             <h3 className="text-2xl font-serif text-text mb-5 flex items-center">
               <span className="h-3 w-3 rounded-full bg-accent mr-3"></span>
               Everyday Life
@@ -74,7 +74,7 @@ const About: React.FC = () => {
                 "Quiet evenings reading or watching feel-good shows"
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <span className="text-accent inline-block mr-2">✧</span>
+                  <span className="text-accent inline-block mr-2.5 text-xs">●</span>
                   <span className="text-text-light">{item}</span>
                 </li>
               ))}
@@ -82,7 +82,7 @@ const About: React.FC = () => {
           </div>
 
           {/* My Nature */}
-          <div className="bg-white/60 backdrop-blur-sm p-8 rounded-3xl shadow-sm hover:shadow-md transition-all duration-300 border border-primary/30 hover:border-primary/50">
+          <div className="bg-white/60 backdrop-blur-sm p-8 rounded-3xl shadow-sm hover:shadow-md transition-all duration-300 border border-primary/20 hover:border-primary/40">
             <h3 className="text-2xl font-serif text-text mb-5 flex items-center">
               <span className="h-3 w-3 rounded-full bg-primary mr-3"></span>
               My Nature
@@ -96,7 +96,7 @@ const About: React.FC = () => {
                 "Balance between planning and spontaneity"
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <span className="text-primary inline-block mr-2">♡</span>
+                  <span className="text-primary inline-block mr-2.5 text-xs">●</span>
                   <span className="text-text-light">{item}</span>
                 </li>
               ))}
@@ -104,7 +104,7 @@ const About: React.FC = () => {
           </div>
 
           {/* Interests */}
-          <div className="bg-white/60 backdrop-blur-sm p-8 rounded-3xl shadow-sm hover:shadow-md transition-all duration-300 border border-secondary/30 hover:border-secondary/50 md:col-span-2">
+          <div className="bg-white/60 backdrop-blur-sm p-8 rounded-3xl shadow-sm hover:shadow-md transition-all duration-300 border border-secondary/20 hover:border-secondary/40 md:col-span-2">
             <h3 className="text-2xl font-serif text-text mb-5 flex items-center">
               <span className="h-3 w-3 rounded-full bg-secondary mr-3"></span>
               Interests
@@ -118,7 +118,7 @@ const About: React.FC = () => {
                   "Human-centered design and accessibility principles"
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
-                    <span className="text-secondary inline-block mr-2">✿</span>
+                    <span className="text-secondary inline-block mr-2.5 text-xs">●</span>
                     <span className="text-text-light">{item}</span>
                   </li>
                 ))}
@@ -131,7 +131,7 @@ const About: React.FC = () => {
                   "Creating spaces that feel both comforting and inspiring"
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
-                    <span className="text-secondary inline-block mr-2">✿</span>
+                    <span className="text-secondary inline-block mr-2.5 text-xs">●</span>
                     <span className="text-text-light">{item}</span>
                   </li>
                 ))}
@@ -140,7 +140,7 @@ const About: React.FC = () => {
           </div>
 
           {/* Aspirations */}
-          <div className="bg-white/60 backdrop-blur-sm p-8 rounded-3xl shadow-sm hover:shadow-md transition-all duration-300 border border-accent/30 hover:border-accent/50 md:col-span-2">
+          <div className="bg-white/60 backdrop-blur-sm p-8 rounded-3xl shadow-sm hover:shadow-md transition-all duration-300 border border-accent/20 hover:border-accent/40 md:col-span-2">
             <h3 className="text-2xl font-serif text-text mb-5 flex items-center">
               <span className="h-3 w-3 rounded-full bg-accent mr-3"></span>
               Aspirations
@@ -154,7 +154,7 @@ const About: React.FC = () => {
                   "Visiting Portugal to connect with part of my ancestry"
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
-                    <span className="text-accent inline-block mr-2">✧</span>
+                    <span className="text-accent inline-block mr-2.5 text-xs">●</span>
                     <span className="text-text-light">{item}</span>
                   </li>
                 ))}
@@ -167,7 +167,7 @@ const About: React.FC = () => {
                   "Designing digital spaces that bring joy to people's lives"
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
-                    <span className="text-accent inline-block mr-2">✧</span>
+                    <span className="text-accent inline-block mr-2.5 text-xs">●</span>
                     <span className="text-text-light">{item}</span>
                   </li>
                 ))}

@@ -74,7 +74,7 @@ const Notes: React.FC = () => {
           <h2 className="text-5xl md:text-6xl font-serif text-text mb-6 relative z-10">Notes & Thoughts</h2>
           <div className="w-32 h-1 bg-gradient-to-r from-secondary/0 via-secondary to-secondary/0 mx-auto"></div>
           <p className="text-xl text-text-light mt-6 mb-8 max-w-2xl mx-auto leading-relaxed relative z-10">
-            Little musings I might share with friends over coffee. Nothing too formal - just thinking out loud.
+            Brief reflections on design, technology, and life.
           </p>
           
           {/* Category filters */}
