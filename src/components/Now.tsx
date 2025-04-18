@@ -40,6 +40,21 @@ const Now: React.FC = () => {
   return (
     <section id="now" className="py-16 bg-gradient-to-b from-primary/5 via-background to-background/95">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* New here banner */}
+        <div className="mb-6 backdrop-blur-sm bg-white/60 rounded-3xl p-1 border border-primary/10 shadow-sm">
+          <div className="p-4 md:p-5 rounded-2xl relative overflow-hidden">
+            <Link to="/about" className="flex items-center justify-between text-text hover:text-primary transition-colors duration-300 group">
+              <span className="flex items-center">
+                <span className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center mr-3 text-sm group-hover:bg-accent/30 transition-colors duration-300">👋</span>
+                <span className="font-medium">New here? Get to know me</span>
+              </span>
+              <span className="flex items-center">
+                <span className="text-primary group-hover:translate-x-1 transition-transform duration-300">→</span>
+              </span>
+            </Link>
+          </div>
+        </div>
+        
         {/* Simple intro with picture */}
         <div className="mb-6 backdrop-blur-sm bg-white/60 rounded-3xl p-1 border border-primary/10 shadow-sm">
           <div className="p-6 rounded-2xl relative overflow-hidden">
