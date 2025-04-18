@@ -1,6 +1,14 @@
 import React from 'react';
 
 const Now: React.FC = () => {
+  // Get current date in a nice format
+  const today = new Date();
+  const formattedDate = today.toLocaleDateString('en-US', {
+    month: 'long',
+    day: 'numeric', 
+    year: 'numeric'
+  });
+  
   return (
     <section id="now" className="py-24 bg-gradient-to-b from-accent/10 via-background to-background/95">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -127,8 +135,11 @@ const Now: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-12 text-center text-text-light/80 italic">
-          <p>Last updated: April 2024</p>
+        <div className="mt-12 backdrop-blur-sm bg-white/40 py-3 px-6 rounded-full inline-block mx-auto border border-primary/10">
+          <p className="text-text-light flex items-center">
+            <span className="w-3 h-3 bg-primary/60 rounded-full animate-pulse mr-2"></span>
+            <span>Last updated: {formattedDate}</span>
+          </p>
         </div>
       </div>
     </section>
