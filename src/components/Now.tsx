@@ -126,7 +126,7 @@ const Now: React.FC = () => {
         </div>
 
         <div className="mt-12 text-center text-text-light/80 italic">
-          <p>Last updated: March 2024</p>
+          <p>Last updated: April 2024</p>
         </div>
       </div>
     </section>
