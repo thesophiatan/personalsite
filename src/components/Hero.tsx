@@ -24,11 +24,15 @@ const Hero: React.FC = () => {
   return (
     <section 
       ref={sectionRef}
-      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-primary/20 via-secondary/10 to-background pt-16 relative"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-primary/20 via-secondary/10 to-background pt-16 relative w-full bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
     >
-      <div className="relative z-10 flex items-center justify-center min-h-[70vh] py-20">
+      <div className="relative z-10 flex items-center justify-center min-h-[70vh] py-20 w-full">
         {/* Decorative background elements */}
-        <div className="absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute inset-0 -z-10 overflow-hidden w-full h-full">
           <div className="absolute top-1/4 -left-20 w-64 h-64 rounded-full bg-primary/30 blur-3xl opacity-60"></div>
           <div className="absolute -bottom-12 -right-16 w-72 h-72 rounded-full bg-accent/30 blur-3xl opacity-60"></div>
           <div className="absolute top-1/2 left-1/3 w-40 h-40 rounded-full bg-secondary/30 blur-3xl opacity-60"></div>
