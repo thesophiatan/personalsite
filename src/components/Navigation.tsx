@@ -48,6 +48,18 @@ const Navigation: React.FC = () => {
     };
   }, []);
 
+  // Prevent body scrolling when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMenuOpen]);
+
   // Close menu when route changes
   useEffect(() => {
     setIsMenuOpen(false);
@@ -113,9 +125,10 @@ const Navigation: React.FC = () => {
         {/* Mobile Menu */}
         <div
           ref={menuRef}
-          className={`md:hidden fixed inset-0 bg-background/95 backdrop-blur-sm transition-all duration-300 ease-in-out ${
+          className={`md:hidden fixed inset-0 bg-background/95 backdrop-blur-md transition-all duration-300 ease-in-out z-[100] ${
             isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
           }`}
+          style={{ top: 0, left: 0, right: 0, bottom: 0 }}
         >
           {/* Close button */}
           <button 
