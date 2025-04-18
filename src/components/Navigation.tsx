@@ -43,10 +43,10 @@ const Navigation: React.FC = () => {
           {/* Logo */}
           <Link 
             to="/" 
-            className="text-2xl font-serif text-text hover:text-primary transition-colors duration-300 relative group"
+            className="text-2xl font-serif text-text hover:text-primary transition-colors duration-300 relative group flex items-center"
           >
-            <span className="relative z-10">Sophia Tan</span>
-            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+            <span className="relative z-10 bg-gradient-to-r from-primary to-accent-alt bg-clip-text text-transparent">Sophia Tan</span>
+            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
           </Link>
 
           {/* Desktop Navigation */}
