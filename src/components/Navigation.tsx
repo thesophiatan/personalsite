@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -31,13 +32,31 @@ const Navigation: React.FC = () => {
     };
   }, [isMenuOpen]);
 
+  // Handle scroll to change nav background
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   // Close menu when route changes
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location]);
 
   return (
-    <nav className="fixed w-full z-50">
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${
+      scrolled ? 'bg-background/95 backdrop-blur-md shadow-sm' : 'bg-transparent'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
