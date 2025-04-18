@@ -1,12 +1,14 @@
 import React from 'react';
 import Hero from '../components/Hero';
-import BlogPreview from '../components/BlogPreview';
+import Projects from '../components/Projects';
+import NotesPreview from '../components/NotesPreview';
 
 const Home: React.FC = () => {
   return (
-    <div>
+    <div className="space-y-20">
       <Hero />
-      <BlogPreview />
+      <Projects />
+      <NotesPreview />
     </div>
   );
 };
