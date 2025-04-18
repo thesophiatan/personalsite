@@ -2,19 +2,20 @@ import React from 'react';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-primary/20 to-background">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        {/* Decorative elements */}
-        <div className="absolute top-12 right-10 w-16 h-16 rounded-full bg-primary/30 blur-2xl"></div>
-        <div className="absolute bottom-24 left-6 w-20 h-20 rounded-full bg-accent/30 blur-2xl"></div>
-        <div className="absolute top-1/2 right-0 w-10 h-10 rounded-full bg-secondary/30 blur-xl"></div>
-        
-        <h2 className="text-6xl font-serif text-text mb-8 text-center">
-          About Me
-        </h2>
-        <p className="text-2xl text-text-light mb-12 text-center max-w-3xl mx-auto leading-relaxed">
-          Hey! I'm Sophia. I write code, drink too much tea, and try to make things that feel good to use.
-        </p>
+    <section id="about" className="py-20 bg-gradient-to-b from-primary/5 via-background to-background/95">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16 relative">
+          <div className="absolute -top-12 right-1/4 w-32 h-32 bg-primary/20 rounded-full blur-2xl"></div>
+          <div className="absolute -bottom-8 left-1/4 w-28 h-28 bg-accent/20 rounded-full blur-2xl"></div>
+          
+          <h2 className="text-6xl font-serif text-text mb-8 text-center relative z-10">
+            About Me
+          </h2>
+          <p className="text-2xl text-text-light mb-12 text-center max-w-3xl mx-auto leading-relaxed relative z-10">
+            Hey! I'm Sophia. I write code, drink too much tea, and try to make things that feel good to use.
+          </p>
+          <div className="w-40 h-1 bg-gradient-to-r from-accent/0 via-primary to-secondary/0 mx-auto"></div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* What I Do */}
