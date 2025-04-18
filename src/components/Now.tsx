@@ -38,15 +38,10 @@ const Now: React.FC = () => {
   }, [projects.length]);
   
   return (
-    <section id="now" className="py-20 bg-gradient-to-b from-primary/5 via-background to-background/95">
+    <section id="now" className="py-16 bg-gradient-to-b from-primary/5 via-background to-background/95">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 relative">
-          <div className="absolute -top-12 right-1/4 w-32 h-32 bg-primary/20 rounded-full blur-2xl"></div>
-          <div className="absolute -bottom-8 left-1/4 w-28 h-28 bg-accent/20 rounded-full blur-2xl"></div>
-        </div>
-
         {/* Simple intro with picture */}
-        <div className="mb-8 backdrop-blur-sm bg-white/60 rounded-3xl p-1 border border-primary/10 shadow-sm">
+        <div className="mb-6 backdrop-blur-sm bg-white/60 rounded-3xl p-1 border border-primary/10 shadow-sm">
           <div className="p-6 rounded-2xl relative overflow-hidden">
             <div className="flex items-center gap-6">
               <div className="w-20 h-20 rounded-full overflow-hidden flex-shrink-0 border-2 border-white/50 shadow-sm">
@@ -74,7 +69,7 @@ const Now: React.FC = () => {
           </div>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-6">
           {/* Thoughts Section (renamed from Notes) */}
           <div className="backdrop-blur-sm bg-white/60 rounded-3xl p-1 border border-primary/10 shadow-sm">
             <div className="p-6 md:p-8 rounded-2xl relative overflow-hidden">
