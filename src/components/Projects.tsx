@@ -119,10 +119,10 @@ const Projects: React.FC<ProjectsProps> = ({ isStandalone = false }) => {
     <section id="projects" className={sectionClassName}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20 relative">
-          <div className="absolute -top-12 right-1/4 w-32 h-32 bg-primary/10 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute -bottom-8 left-1/4 w-28 h-28 bg-accent/10 rounded-full blur-xl animate-twinkle"></div>
+          <div className="absolute -top-12 right-1/4 w-32 h-32 bg-primary/10 rounded-full blur-xl"></div>
+          <div className="absolute -bottom-8 left-1/4 w-28 h-28 bg-accent/10 rounded-full blur-xl"></div>
           
-          <h2 className="text-5xl md:text-6xl font-serif text-text mb-6 animate-float relative z-10">Projects</h2>
+          <h2 className="text-5xl md:text-6xl font-serif text-text mb-6 relative z-10">Projects</h2>
           <p className="text-xl text-text-light mb-6 max-w-2xl mx-auto leading-relaxed relative z-10">
             Gentle tools for mindful living and meaningful connections
           </p>
@@ -155,7 +155,7 @@ const Projects: React.FC<ProjectsProps> = ({ isStandalone = false }) => {
                 <div className="mb-6">
                   <h4 className="text-sm font-medium text-text mb-3 flex items-center">
                     <span className="w-4 h-4 mr-2 rounded-full bg-accent/20 flex items-center justify-center">
-                      <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                      <span className="w-2 h-2 rounded-full bg-accent"></span>
                     </span>
                     Key Features
                   </h4>

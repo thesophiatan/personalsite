@@ -4,7 +4,7 @@ const About: React.FC = () => {
   return (
     <section id="about" className="py-20 bg-gradient-to-b from-primary/10 to-background">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-6xl font-serif text-text mb-8 text-center animate-float">
+        <h2 className="text-6xl font-serif text-text mb-8 text-center">
           About Me
         </h2>
         <p className="text-2xl text-text-light mb-12 text-center max-w-3xl mx-auto leading-relaxed">
@@ -15,7 +15,7 @@ const About: React.FC = () => {
           {/* What I Do */}
           <div className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-primary/20 hover:border-secondary/40">
             <h3 className="text-2xl font-serif text-text mb-4 flex items-center">
-              <span className="h-3 w-3 rounded-full bg-primary mr-3 animate-pulse"></span>
+              <span className="h-3 w-3 rounded-full bg-primary mr-3"></span>
               What I Do
             </h3>
             <ul className="space-y-2">
@@ -36,7 +36,7 @@ const About: React.FC = () => {
           {/* Background */}
           <div className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-secondary/20 hover:border-primary/40">
             <h3 className="text-2xl font-serif text-text mb-4 flex items-center">
-              <span className="h-3 w-3 rounded-full bg-secondary mr-3 animate-pulse"></span>
+              <span className="h-3 w-3 rounded-full bg-secondary mr-3"></span>
               Background
             </h3>
             <ul className="space-y-2">
@@ -57,7 +57,7 @@ const About: React.FC = () => {
           {/* Everyday Life */}
           <div className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-accent/20 hover:border-secondary/40">
             <h3 className="text-2xl font-serif text-text mb-4 flex items-center">
-              <span className="h-3 w-3 rounded-full bg-accent mr-3 animate-pulse"></span>
+              <span className="h-3 w-3 rounded-full bg-accent mr-3"></span>
               Everyday Life
             </h3>
             <ul className="space-y-2">
@@ -79,7 +79,7 @@ const About: React.FC = () => {
           {/* My Nature */}
           <div className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-primary/20 hover:border-accent/40">
             <h3 className="text-2xl font-serif text-text mb-4 flex items-center">
-              <span className="h-3 w-3 rounded-full bg-primary mr-3 animate-pulse"></span>
+              <span className="h-3 w-3 rounded-full bg-primary mr-3"></span>
               My Nature
             </h3>
             <ul className="space-y-2">
@@ -101,7 +101,7 @@ const About: React.FC = () => {
           {/* Interests */}
           <div className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-secondary/20 hover:border-primary/40 md:col-span-2">
             <h3 className="text-2xl font-serif text-text mb-4 flex items-center">
-              <span className="h-3 w-3 rounded-full bg-secondary mr-3 animate-pulse"></span>
+              <span className="h-3 w-3 rounded-full bg-secondary mr-3"></span>
               Interests
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -137,7 +137,7 @@ const About: React.FC = () => {
           {/* Aspirations */}
           <div className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-accent/20 hover:border-secondary/40 md:col-span-2">
             <h3 className="text-2xl font-serif text-text mb-4 flex items-center">
-              <span className="h-3 w-3 rounded-full bg-accent mr-3 animate-twinkle"></span>
+              <span className="h-3 w-3 rounded-full bg-accent mr-3"></span>
               Aspirations
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
