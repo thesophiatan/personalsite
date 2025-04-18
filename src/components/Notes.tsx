@@ -51,31 +51,40 @@ const Notes: React.FC = () => {
   ];
 
   return (
-    <section id="notes" className="py-24 bg-gradient-to-b from-accent/10 via-background to-background">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <h2 className="section-title">Notes & Thoughts</h2>
-          <div className="w-32 h-1 bg-gradient-to-r from-accent via-primary to-accent mx-auto rounded-full"></div>
-          <p className="section-subtitle">
+    <section id="notes" className="pt-24 pb-20 bg-gradient-to-b from-primary/5 via-background to-background/95">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16 relative">
+          <div className="absolute -top-12 left-1/3 w-28 h-28 bg-secondary/10 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute -bottom-8 right-1/4 w-24 h-24 bg-primary/10 rounded-full blur-xl animate-twinkle"></div>
+          
+          <h2 className="text-5xl md:text-6xl font-serif text-text mb-6 relative z-10">Notes & Thoughts</h2>
+          <div className="w-32 h-1 bg-gradient-to-r from-secondary/0 via-secondary to-secondary/0 mx-auto"></div>
+          <p className="text-xl text-text-light mt-6 max-w-2xl mx-auto leading-relaxed relative z-10">
             Little musings I might share with friends over coffee. Nothing too formal - just thinking out loud.
           </p>
         </div>
 
-        <div className="space-y-16">
+        <div className="space-y-12">
           {notes.map((note) => (
-            <div key={note.id} className="card group">
-              <h3 className="text-2xl font-serif text-text mb-2 group-hover:text-primary transition-colors duration-300">
-                {note.title}
-              </h3>
-              <p className="text-sm text-text-light mb-6">
-                {note.date}
-              </p>
-              <div className="space-y-4">
-                {note.content.trim().split('\n\n').map((paragraph, idx) => (
-                  <p key={idx} className="text-text-light">
-                    {paragraph.trim()}
-                  </p>
-                ))}
+            <div key={note.id} className="backdrop-blur-sm bg-white/60 rounded-3xl p-1 border border-secondary/10 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 hover:-translate-y-1">
+              <div className="p-8 rounded-2xl relative overflow-hidden">
+                <div className="absolute -bottom-6 -right-6 w-16 h-16 bg-secondary/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div className="flex justify-between items-start mb-4">
+                  <span className="text-sm text-text-light bg-white/80 px-3 py-1 rounded-full border border-secondary/10">{note.date}</span>
+                </div>
+                
+                <h3 className="text-2xl font-serif text-text mb-4 group-hover:text-primary transition-colors">
+                  {note.title}
+                </h3>
+                
+                <div className="space-y-4">
+                  {note.content.trim().split('\n\n').map((paragraph, idx) => (
+                    <p key={idx} className="text-text-light leading-relaxed">
+                      {paragraph.trim()}
+                    </p>
+                  ))}
+                </div>
               </div>
             </div>
           ))}

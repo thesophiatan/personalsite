@@ -18,12 +18,14 @@ const NotesPreview: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="-mt-10 pt-32 pb-20 bg-gradient-to-b from-background via-background/98 to-accent/5">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-serif text-text mb-4">Notes & Thoughts</h2>
-          <div className="w-24 h-1 bg-primary/50 mx-auto"></div>
-          <p className="text-text-light mt-4 max-w-2xl mx-auto">
+        <div className="text-center mb-16 relative">
+          <div className="absolute -top-12 left-1/3 w-28 h-28 bg-secondary/10 rounded-full blur-xl animate-pulse"></div>
+          
+          <h2 className="text-4xl md:text-5xl font-serif text-text mb-4 relative z-10">Notes & Thoughts</h2>
+          <div className="w-32 h-1 bg-gradient-to-r from-secondary/0 via-secondary to-secondary/0 mx-auto"></div>
+          <p className="text-text-light mt-4 max-w-2xl mx-auto relative z-10">
             Little musings I might share with friends over coffee. Nothing too formal - just thinking out loud.
           </p>
         </div>
@@ -32,16 +34,18 @@ const NotesPreview: React.FC = () => {
           {notes.map((note) => (
             <div 
               key={note.id}
-              className="card group hover:border-primary/30 transition-colors border border-gray-100 bg-white/50 backdrop-blur-sm"
+              className="backdrop-blur-sm bg-white/60 rounded-3xl p-1 border border-secondary/10 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 hover:-translate-y-1"
             >
-              <div className="p-6">
+              <div className="p-6 rounded-2xl relative overflow-hidden">
+                <div className="absolute -bottom-6 -right-6 w-16 h-16 bg-secondary/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
                 <div className="flex justify-between items-start mb-4">
-                  <span className="text-sm text-text-light">{note.date}</span>
+                  <span className="text-sm text-text-light bg-white/60 px-3 py-1 rounded-full border border-secondary/10">{note.date}</span>
                 </div>
                 <h3 className="text-2xl font-serif text-text mb-4 group-hover:text-primary transition-colors">
                   {note.title}
                 </h3>
-                <p className="text-text-light mb-4">{note.excerpt}</p>
+                <p className="text-text-light mb-4 relative z-10">{note.excerpt}</p>
               </div>
             </div>
           ))}
@@ -50,7 +54,7 @@ const NotesPreview: React.FC = () => {
         <div className="text-center mt-12">
           <Link 
             to="/notes"
-            className="btn btn-secondary inline-flex items-center space-x-2"
+            className="px-8 py-3 rounded-full bg-primary text-white font-medium transition-all hover:shadow-md hover:translate-y-[-2px] hover:bg-primary/90 inline-flex items-center space-x-2"
           >
             <span>View all notes</span>
             <span>→</span>

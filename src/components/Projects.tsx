@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Projects: React.FC = () => {
+interface ProjectsProps {
+  isStandalone?: boolean;
+}
+
+const Projects: React.FC<ProjectsProps> = ({ isStandalone = false }) => {
   const projects = [
     {
       title: "Fragments",
@@ -98,57 +102,70 @@ const Projects: React.FC = () => {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'current':
-        return 'bg-green-500/10 text-green-500';
+        return 'bg-white border border-primary text-primary';
       case 'planned':
-        return 'bg-blue-500/10 text-blue-500';
+        return 'bg-white border border-secondary text-secondary';
       default:
-        return 'bg-gray-500/10 text-gray-500';
+        return 'bg-white border border-accent text-accent';
     }
   };
 
+  // Determine the className based on whether this is a standalone page or embedded in the home page
+  const sectionClassName = isStandalone
+    ? "pt-20 pb-24 bg-gradient-to-b from-primary/5 via-background to-background/95" // For standalone page
+    : "-mt-20 pt-40 pb-24 bg-gradient-to-b from-background via-background to-background/95"; // For home page
+
   return (
-    <section id="projects" className="py-24 bg-gradient-to-b from-background to-background/95">
+    <section id="projects" className={sectionClassName}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl font-serif text-text mb-6">Projects</h2>
-          <p className="text-xl text-text-light/80 mb-6">Gentle tools for mindful living and meaningful connections</p>
-          <div className="w-32 h-1 bg-gradient-to-r from-primary/0 via-primary to-primary/0 mx-auto"></div>
+        <div className="text-center mb-20 relative">
+          <div className="absolute -top-12 right-1/4 w-32 h-32 bg-primary/10 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute -bottom-8 left-1/4 w-28 h-28 bg-accent/10 rounded-full blur-xl animate-twinkle"></div>
+          
+          <h2 className="text-5xl md:text-6xl font-serif text-text mb-6 animate-float relative z-10">Projects</h2>
+          <p className="text-xl text-text-light mb-6 max-w-2xl mx-auto leading-relaxed relative z-10">
+            Gentle tools for mindful living and meaningful connections
+          </p>
+          <div className="w-40 h-1 bg-gradient-to-r from-accent/0 via-primary to-secondary/0 mx-auto"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="card group hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1"
+              className="backdrop-blur-sm bg-white/60 rounded-3xl p-1 border border-primary/10 group transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1"
             >
-              <div className="p-8">
-                <div className="flex justify-between items-start mb-6">
+              <div className="p-8 relative overflow-hidden rounded-2xl">
+                <div className={`absolute -top-6 -right-6 w-16 h-16 ${index % 3 === 0 ? 'bg-primary/10' : index % 3 === 1 ? 'bg-secondary/10' : 'bg-accent/10'} rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                
+                <div className="flex flex-col md:flex-row justify-between items-start gap-4 mb-6">
                   <h3 className="text-2xl font-serif text-text group-hover:text-primary transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <div className="flex gap-2">
+                  <div className="flex flex-wrap gap-2">
                     <span className={`text-sm ${getStatusColor(project.status)} px-3 py-1 rounded-full`}>
                       {project.status === 'current' ? 'In Progress' : 'Planned'}
                     </span>
-                    <span className="text-sm text-primary bg-primary/10 px-3 py-1 rounded-full">
+                    <span className="text-sm text-text-light bg-white/80 px-3 py-1 rounded-full border border-primary/20">
                       {project.category}
                     </span>
                   </div>
                 </div>
-                <p className="text-text-light/90 mb-6 leading-relaxed">{project.description}</p>
+                <p className="text-text-light mb-6 leading-relaxed">{project.description}</p>
                 <div className="mb-6">
                   <h4 className="text-sm font-medium text-text mb-3 flex items-center">
-                    <span className="w-4 h-4 mr-2 rounded-full bg-primary/20 flex items-center justify-center">
-                      <span className="w-2 h-2 rounded-full bg-primary"></span>
+                    <span className="w-4 h-4 mr-2 rounded-full bg-accent/20 flex items-center justify-center">
+                      <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
                     </span>
                     Key Features
                   </h4>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 pl-6">
                     {project.features.map((feature, featureIndex) => (
                       <li 
                         key={featureIndex} 
-                        className="text-sm text-text-light/80 pl-6 relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:w-1 before:h-1 before:rounded-full before:bg-primary/30 before:transform before:-translate-y-1/2"
+                        className="text-text-light relative"
                       >
+                        <span className="absolute -left-6 top-1/2 transform -translate-y-1/2 w-2 h-2 rounded-full bg-primary/40"></span>
                         {feature}
                       </li>
                     ))}
@@ -158,7 +175,7 @@ const Projects: React.FC = () => {
                   {project.tags.map((tag, tagIndex) => (
                     <span 
                       key={tagIndex} 
-                      className="text-xs text-text-light/70 bg-background/50 px-3 py-1 rounded-full border border-text-light/10 hover:border-primary/30 hover:text-primary transition-colors duration-300"
+                      className="text-xs text-text-light bg-white/80 px-3 py-1 rounded-full border border-secondary/20 hover:border-primary/40 hover:text-primary transition-colors duration-300"
                     >
                       {tag}
                     </span>

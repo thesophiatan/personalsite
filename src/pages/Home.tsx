@@ -5,7 +5,7 @@ import NotesPreview from '../components/NotesPreview';
 
 const Home: React.FC = () => {
   return (
-    <div className="space-y-20">
+    <div>
       <Hero />
       <Projects />
       <NotesPreview />

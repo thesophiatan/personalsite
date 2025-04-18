@@ -2,165 +2,172 @@ import React from 'react';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-24 bg-gradient-to-b from-accent/10 via-background to-background">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <h2 className="section-title">About Me</h2>
-          <div className="w-32 h-1 bg-gradient-to-r from-accent via-primary to-accent mx-auto rounded-full"></div>
-          <p className="section-subtitle">
-            Hi there! I'm a developer who believes technology should feel good to use. I spend my days writing code, exploring cafes with my dog, and trying (sometimes failing) to perfect my coffee brewing technique.
-          </p>
-        </div>
+    <section id="about" className="py-20 bg-gradient-to-b from-primary/10 to-background">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-6xl font-serif text-text mb-8 text-center animate-float">
+          About Me
+        </h2>
+        <p className="text-2xl text-text-light mb-12 text-center max-w-3xl mx-auto leading-relaxed">
+          Hey! I'm Sophia. I write code, drink too much tea, and try to make things that feel good to use.
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Work */}
-          <div className="card group">
-            <h3 className="text-2xl font-serif text-text mb-6 group-hover:text-primary transition-colors duration-300">What I Do</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <span className="w-5 h-5 mr-3 rounded-full bg-accent/20 flex items-center justify-center mt-1">
-                  <span className="w-2 h-2 rounded-full bg-primary"></span>
-                </span>
-                <span>Build accessible, human-centered websites and applications</span>
-              </li>
-              <li className="flex items-start">
-                <span className="w-5 h-5 mr-3 rounded-full bg-accent/20 flex items-center justify-center mt-1">
-                  <span className="w-2 h-2 rounded-full bg-primary"></span>
-                </span>
-                <span>Focus on creating experiences that feel natural to use</span>
-              </li>
-              <li className="flex items-start">
-                <span className="w-5 h-5 mr-3 rounded-full bg-accent/20 flex items-center justify-center mt-1">
-                  <span className="w-2 h-2 rounded-full bg-primary"></span>
-                </span>
-                <span>Combine my psychology background with technical skills</span>
-              </li>
+          {/* What I Do */}
+          <div className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-primary/20 hover:border-secondary/40">
+            <h3 className="text-2xl font-serif text-text mb-4 flex items-center">
+              <span className="h-3 w-3 rounded-full bg-primary mr-3 animate-pulse"></span>
+              What I Do
+            </h3>
+            <ul className="space-y-2">
+              {[
+                "Design and build websites with a focus on accessibility",
+                "Specialize in React and TypeScript development",
+                "Create digital experiences that feel natural and intuitive",
+                "Study psychology to better understand how people interact with technology"
+              ].map((item, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="text-accent inline-block mr-2">•</span>
+                  <span className="text-text-light">{item}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Background */}
-          <div className="card group">
-            <h3 className="text-2xl font-serif text-text mb-6 group-hover:text-primary transition-colors duration-300">Background</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <span className="w-5 h-5 mr-3 rounded-full bg-accent/20 flex items-center justify-center mt-1">
-                  <span className="w-2 h-2 rounded-full bg-primary"></span>
-                </span>
-                <span>Mixed heritage: Chinese, Cambodian, Vietnamese, and Thai</span>
-              </li>
-              <li className="flex items-start">
-                <span className="w-5 h-5 mr-3 rounded-full bg-accent/20 flex items-center justify-center mt-1">
-                  <span className="w-2 h-2 rounded-full bg-primary"></span>
-                </span>
-                <span>Studied Psychology and Chinese in college</span>
-              </li>
-              <li className="flex items-start">
-                <span className="w-5 h-5 mr-3 rounded-full bg-accent/20 flex items-center justify-center mt-1">
-                  <span className="w-2 h-2 rounded-full bg-primary"></span>
-                </span>
-                <span>Self-taught programmer with a love for frontend</span>
-              </li>
+          <div className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-secondary/20 hover:border-primary/40">
+            <h3 className="text-2xl font-serif text-text mb-4 flex items-center">
+              <span className="h-3 w-3 rounded-full bg-secondary mr-3 animate-pulse"></span>
+              Background
+            </h3>
+            <ul className="space-y-2">
+              {[
+                "Mixed heritage: Chinese and Portuguese ancestry",
+                "Grew up speaking English and Cantonese at home",
+                "Currently learning French for fun and future travels",
+                "Connecting with my heritage through cooking traditional recipes"
+              ].map((item, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="text-accent inline-block mr-2">•</span>
+                  <span className="text-text-light">{item}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Everyday */}
-          <div className="card group">
-            <h3 className="text-2xl font-serif text-text mb-6 group-hover:text-primary transition-colors duration-300">Everyday Life</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <span className="w-5 h-5 mr-3 rounded-full bg-accent/20 flex items-center justify-center mt-1">
-                  <span className="w-2 h-2 rounded-full bg-primary"></span>
-                </span>
-                <span>Coffee shop explorer with my dog as co-pilot</span>
-              </li>
-              <li className="flex items-start">
-                <span className="w-5 h-5 mr-3 rounded-full bg-accent/20 flex items-center justify-center mt-1">
-                  <span className="w-2 h-2 rounded-full bg-primary"></span>
-                </span>
-                <span>Serious tea and coffee enthusiast (probably too serious)</span>
-              </li>
-              <li className="flex items-start">
-                <span className="w-5 h-5 mr-3 rounded-full bg-accent/20 flex items-center justify-center mt-1">
-                  <span className="w-2 h-2 rounded-full bg-primary"></span>
-                </span>
-                <span>Attempting to cook dishes from my heritage (with mixed results)</span>
-              </li>
+          {/* Everyday Life */}
+          <div className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-accent/20 hover:border-secondary/40">
+            <h3 className="text-2xl font-serif text-text mb-4 flex items-center">
+              <span className="h-3 w-3 rounded-full bg-accent mr-3 animate-pulse"></span>
+              Everyday Life
+            </h3>
+            <ul className="space-y-2">
+              {[
+                "Morning walks with my dog before starting work",
+                "Too many cups of tea and coffee throughout the day",
+                "Finding new cafés to work from or just relax in",
+                "Cooking experiments (with varying degrees of success)",
+                "Quiet evenings reading or watching feel-good shows"
+              ].map((item, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="text-accent inline-block mr-2">•</span>
+                  <span className="text-text-light">{item}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* My Nature */}
-          <div className="card group">
-            <h3 className="text-2xl font-serif text-text mb-6 group-hover:text-primary transition-colors duration-300">My Nature</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <span className="w-5 h-5 mr-3 rounded-full bg-accent/20 flex items-center justify-center mt-1">
-                  <span className="w-2 h-2 rounded-full bg-primary"></span>
-                </span>
-                <span>Enjoy both busy cafes and quiet reading nooks</span>
-              </li>
-              <li className="flex items-start">
-                <span className="w-5 h-5 mr-3 rounded-full bg-accent/20 flex items-center justify-center mt-1">
-                  <span className="w-2 h-2 rounded-full bg-primary"></span>
-                </span>
-                <span>Value comfortable silence over small talk any day</span>
-              </li>
-              <li className="flex items-start">
-                <span className="w-5 h-5 mr-3 rounded-full bg-accent/20 flex items-center justify-center mt-1">
-                  <span className="w-2 h-2 rounded-full bg-primary"></span>
-                </span>
-                <span>Find meaning in connecting deeply with a few people</span>
-              </li>
+          <div className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-primary/20 hover:border-accent/40">
+            <h3 className="text-2xl font-serif text-text mb-4 flex items-center">
+              <span className="h-3 w-3 rounded-full bg-primary mr-3 animate-pulse"></span>
+              My Nature
+            </h3>
+            <ul className="space-y-2">
+              {[
+                "Enjoy both quiet moments and lively atmospheres",
+                "Value comfortable silence and deep understanding",
+                "Thoughtful listener who appreciates meaningful conversations",
+                "Curious about people and their stories",
+                "Balance between planning and spontaneity"
+              ].map((item, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="text-accent inline-block mr-2">•</span>
+                  <span className="text-text-light">{item}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Interests */}
-          <div className="card group">
-            <h3 className="text-2xl font-serif text-text mb-6 group-hover:text-primary transition-colors duration-300">Interests</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <span className="w-5 h-5 mr-3 rounded-full bg-accent/20 flex items-center justify-center mt-1">
-                  <span className="w-2 h-2 rounded-full bg-primary"></span>
-                </span>
-                <span>Where psychology and technology intersect</span>
-              </li>
-              <li className="flex items-start">
-                <span className="w-5 h-5 mr-3 rounded-full bg-accent/20 flex items-center justify-center mt-1">
-                  <span className="w-2 h-2 rounded-full bg-primary"></span>
-                </span>
-                <span>Designs that consider how humans actually behave</span>
-              </li>
-              <li className="flex items-start">
-                <span className="w-5 h-5 mr-3 rounded-full bg-accent/20 flex items-center justify-center mt-1">
-                  <span className="w-2 h-2 rounded-full bg-primary"></span>
-                </span>
-                <span>Language learning (currently: improving my Japanese)</span>
-              </li>
-            </ul>
+          <div className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-secondary/20 hover:border-primary/40 md:col-span-2">
+            <h3 className="text-2xl font-serif text-text mb-4 flex items-center">
+              <span className="h-3 w-3 rounded-full bg-secondary mr-3 animate-pulse"></span>
+              Interests
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <ul className="space-y-2">
+                {[
+                  "Growing collection of teas and coffees from around the world",
+                  "Finding new cafés with the perfect ambiance",
+                  "House plants (still learning how to keep them alive)",
+                  "Human-centered design and accessibility principles"
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-accent inline-block mr-2">•</span>
+                    <span className="text-text-light">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <ul className="space-y-2">
+                {[
+                  "Psychology and understanding how people interact with technology",
+                  "Languages and how they shape our thinking",
+                  "Travel photography that captures everyday moments",
+                  "Creating spaces that feel both comforting and inspiring"
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-accent inline-block mr-2">•</span>
+                    <span className="text-text-light">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Aspirations */}
-          <div className="card group">
-            <h3 className="text-2xl font-serif text-text mb-6 group-hover:text-primary transition-colors duration-300">Aspirations</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <span className="w-5 h-5 mr-3 rounded-full bg-accent/20 flex items-center justify-center mt-1">
-                  <span className="w-2 h-2 rounded-full bg-primary"></span>
-                </span>
-                <span>Create digital spaces that feel genuinely welcoming</span>
-              </li>
-              <li className="flex items-start">
-                <span className="w-5 h-5 mr-3 rounded-full bg-accent/20 flex items-center justify-center mt-1">
-                  <span className="w-2 h-2 rounded-full bg-primary"></span>
-                </span>
-                <span>Connect more deeply with my cultural roots</span>
-              </li>
-              <li className="flex items-start">
-                <span className="w-5 h-5 mr-3 rounded-full bg-accent/20 flex items-center justify-center mt-1">
-                  <span className="w-2 h-2 rounded-full bg-primary"></span>
-                </span>
-                <span>Eventually master cooking at least one family recipe properly</span>
-              </li>
-            </ul>
+          <div className="bg-white/60 backdrop-blur-sm p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-accent/20 hover:border-secondary/40 md:col-span-2">
+            <h3 className="text-2xl font-serif text-text mb-4 flex items-center">
+              <span className="h-3 w-3 rounded-full bg-accent mr-3 animate-twinkle"></span>
+              Aspirations
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <ul className="space-y-2">
+                {[
+                  "Creating technology that feels more human and less mechanical",
+                  "Building websites that are truly accessible for everyone",
+                  "Learning to cook dishes from my mixed heritage",
+                  "Visiting Portugal to connect with part of my ancestry"
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-accent inline-block mr-2">•</span>
+                    <span className="text-text-light">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <ul className="space-y-2">
+                {[
+                  "Finding balance between technology and living in the moment",
+                  "Becoming fluent in French (and eventually Mandarin)",
+                  "Creating a home that feels both peaceful and inspiring",
+                  "Designing digital spaces that bring joy to people's lives"
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-accent inline-block mr-2">•</span>
+                    <span className="text-text-light">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
